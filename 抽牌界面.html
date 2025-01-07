@@ -13,6 +13,11 @@
             <p>点击下面的按钮抽取塔罗牌</p>
         </header>
         <button id="draw-card">抽取塔罗牌</button>
+        <div class="button-group">
+            <button id="redraw-card">重新抽牌</button>
+            <button id="draw-three-cards">抽取三张牌</button>
+            <button id="draw-one-card">抽取一张牌</button>
+        </div>
         <div id="card-display"></div>
     </div>
 
@@ -137,6 +142,28 @@
             const selectedCard = cardImages[randomIndex];
             const cardDisplay = document.getElementById('card-display');
             cardDisplay.innerHTML = '<img src="' + selectedCard + '" alt="抽取的塔罗牌"><p>' + cardDescriptions[randomIndex] + '</p>'; // 显示描述
+        });
+
+        document.getElementById('redraw-card').addEventListener('click', function() {
+            const cardDisplay = document.getElementById('card-display');
+            cardDisplay.innerHTML = ''; // 清空当前显示
+        });
+
+        document.getElementById('draw-three-cards').addEventListener('click', function() {
+            const cardDisplay = document.getElementById('card-display');
+            cardDisplay.innerHTML = ''; // 清空当前显示
+            for (let i = 0; i < 3; i++) {
+                const randomIndex = Math.floor(Math.random() * cardImages.length);
+                const selectedCard = cardImages[randomIndex];
+                cardDisplay.innerHTML += '<img src="' + selectedCard + '" alt="抽取的塔罗牌">';
+            }
+        });
+
+        document.getElementById('draw-one-card').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * cardImages.length);
+            const selectedCard = cardImages[randomIndex];
+            const cardDisplay = document.getElementById('card-display');
+            cardDisplay.innerHTML = '<img src="' + selectedCard + '" alt="抽取的塔罗牌">';
         });
     </script>
 </body>
