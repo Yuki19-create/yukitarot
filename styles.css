@@ -18,6 +18,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    width: 100%; /* 使容器在小屏幕上适应 */
 }
 
 header {
@@ -196,13 +197,14 @@ h1 {
 
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 1rem; /* 减少内边距 */
     }
-
+    h1 {
+        font-size: 2rem; /* 调整标题大小 */
+    }
     .buttons {
         flex-direction: column;
     }
-
     .card {
         width: 150px;
         height: 225px;
