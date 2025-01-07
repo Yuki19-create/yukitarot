@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuki Tarot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Yuki Tarot</h1>
+            <p class="subtitle">探索命运的奥秘</p>
+        </header>
+
+        <div class="buttons">
+            <button id="singleCard" class="btn">抽取单张牌</button>
+            <button id="threeCards" class="btn">三张牌阵</button>
+            <button id="reset" class="btn">重新开始</button>
+        </div>
+
+        <div class="reading-area">
+            <div id="cardDisplay" class="card-display"></div>
+            <div id="meaningArea" class="meaning-area"></div>
+        </div>
+
+        <div class="instructions">
+            <h3>使用说明</h3>
+            <ul>
+                <li>单张牌：用于简单问题的快速指引</li>
+                <li>三张牌阵：分别代表过去、现在和未来</li>
+                <li>抽牌前请先在心中默想你的问题</li>
+            </ul>
+        </div>
+    </div>
+    <script src="tarot-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
