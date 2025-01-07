@@ -19,6 +19,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     width: 100%; /* 使容器在小屏幕上适应 */
+    min-height: 100vh; /* 增加最小高度以确保页面延长 */
 }
 
 header {
